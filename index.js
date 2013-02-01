@@ -7,7 +7,7 @@ module.exports = function (a, b) {
     
     for (var i = 0; i < a.length; i++) {        
     	// performs bitwise XOR to test for equality
-		// then flips the result from 0 to 1 using bitwise OR to indicate True on non-equality
+    	// then flips the result from 0 to 1 using bitwise OR to indicate True on non-equality
         if ((a[i] ^ b[i]) | 0) return false;
     }
     
