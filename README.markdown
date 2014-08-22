@@ -59,4 +59,6 @@ npm install buffer-equal
 license
 =======
 
-MIT
+Copyright 2012, 2014 James Halliday <mail@substack.net>
+
+Licensed under the MIT license, see LICENSE for details.
