@@ -20,16 +20,24 @@ test('not equal', function (t) {
 });
 
 test('not equal not buffer', function (t) {
-    var eq = bufferEqual(
-        new Buffer('abc'),
-        'abc'
-    );
-    t.strictEqual(eq, undefined);
+    t.throws(function () {
+        bufferEqual(
+            new Buffer('abc'),
+            'abc'
+        );
+    }, {
+        name: 'TypeError',
+        message: 'b is not a Buffer'
+    });
     t.end();
 });
 
 test('equal not buffer', function (t) {
-    var eq = bufferEqual('abc', 'abc');
-    t.strictEqual(eq, undefined);
+    t.throws(function () {
+        bufferEqual('abc', 'abc')
+    }, {
+        name: 'TypeError',
+        message: 'a is not a Buffer'
+    });
     t.end();
 });
