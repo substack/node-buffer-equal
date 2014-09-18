@@ -30,7 +30,7 @@ output:
 ```
 true
 false
-undefined
+TypeError: b is not a Buffer
 ```
 
 methods
@@ -45,7 +45,7 @@ bufferEqual(a, b)
 
 Return whether the two buffers `a` and `b` are equal.
 
-If `a` or `b` is not a buffer, return `undefined`.
+If `a` or `b` is not a buffer, throw `TypeError`.
 
 install
 =======
