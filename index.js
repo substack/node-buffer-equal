@@ -1,8 +1,8 @@
 var Buffer = require('buffer').Buffer; // for use with browserify
 
 module.exports = function (a, b) {
-    if (!Buffer.isBuffer(a)) return undefined;
-    if (!Buffer.isBuffer(b)) return undefined;
+    if (!Buffer.isBuffer(a)) throw new TypeError('a is not a Buffer');
+    if (!Buffer.isBuffer(b)) throw new TypeError('b is not a Buffer');
     if (typeof a.equals === 'function') return a.equals(b);
     if (a.length !== b.length) return false;
     
